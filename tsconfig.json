@@ -6,7 +6,12 @@
     "noImplicitAny": true, // 禁止使用不明确类型 any
     "strictNullChecks": true, // 在类型检查时，考虑 `null` 和 `undefined`
     "jsx": "preserve", // 指定 jsx 格式
-    "moduleResolution": "node" // 模块解析策略，ts默认用node的解析策略，即相对的方式导入
+    "moduleResolution": "node", // 模块解析策略，ts 默认用 node 的解析策略，即相对的方式导入
+    "sourceMap": true, // JavaScript 文件创建源映射文件
+    "resolveJsonModule": true, // 导入json文件
+    "esModuleInterop": true, // JavaScript 以简化支持 CommonJS 模块
+    "lib": ["esnext", "dom"], // 指定一组描述目标运行时环境的捆绑库声明文件
+    "types": ["vite/client"], // 指定要包含在源文件中而不被引用的类型包名称
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue"] // 指定匹配要包含在编译中的文件
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"] // 指定匹配要包含在编译中的文件
 }
